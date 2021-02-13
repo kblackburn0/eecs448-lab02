@@ -45,19 +45,15 @@ bool LinkedList<T>::search(T value) const
 		Fix this method
 	*/
     
-    while(isFound != true)
+    while(temp!=nullptr)
     {
         if(temp->getValue() == value)
         {
-            isFound = true;
-        }
-        else if(temp->getNext() != nullptr)
-        {
-            temp = temp->getNext();
+            return(true);
         }
         else
         {
-            isFound = false;
+            temp = temp->getNext();
         }
     }
 
